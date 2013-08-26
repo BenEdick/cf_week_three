@@ -8,6 +8,13 @@ CfWeekThree::Application.routes.draw do
 
   get 'contacts' => 'contacts#index'
 
+  resources :contacts do
+  get 'show'
+  patch 'edit'
+  delete 'destroy'
+  get  'new'
+end
+
 
 
   # Example of regular route:
